@@ -6,4 +6,5 @@ cache:
     - ~/.cache
     
 script:
+  - cypress install
   - npx cypress run  --spec "cypress/integration/test.spec.js"
