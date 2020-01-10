@@ -1,2 +1,4 @@
+language: generic
+
 before_script:
   - composer install --no-interaction
