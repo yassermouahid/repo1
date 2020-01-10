@@ -1,9 +1,11 @@
 language: generic
 
-script:
-  - npm run cypress:open
-  
 cache:
   directories:
     - ~/.npm
     - ~/.cache
+
+before_script:
+  - npm start -- --silent &
+script:
+  - npx cypress run  --spec "cypress/integration/test.spec.js"
