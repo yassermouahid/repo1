@@ -1,37 +1,17 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-#div1 {
-  width: 350px;
-  height: 70px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-}
-</style>
-<script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-</script>
-</head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
-<p>Drag image into the rectangle:</p>
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="icon.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<div class="w3-container">
+ <h2>Test 1</h2>
+ <input type="button" class="w3-button w3-black" value="Select"><br><br>
+ <button class="w3-button w3-black">Update</button><br><br>
+ <a href="#" class="w3-button w3-black">Delete</a><br><br>
+ <h2>Avito.ma</h2>
+</div>
 
 </body>
 </html>
