@@ -1,12 +1,9 @@
 language: generic
 
-  cache:
-     paths:
-        - cache/Cypress
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
     
 script:
-  - 'export CYPRESS_CACHE_FOLDER=../../cache/Cypress'
-    - 'npm ci'
-    - 'export CYPRESS_CACHE_FOLDER=cache/Cypress'
-    - 'npm run ci'
   - npx cypress run  --spec "cypress/integration/test.spec.js"
