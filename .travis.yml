@@ -4,12 +4,6 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
-  paths:
-    - cache/Cypress
-
+    
 script:
   - npx cypress run  --spec "cypress/integration/test.spec.js"
-  - 'export CYPRESS_CACHE_FOLDER=../../cache/Cypress'
-  - 'npm ci'
-  - 'export CYPRESS_CACHE_FOLDER=cache/Cypress'
-  - 'npm run ci'
