@@ -2,4 +2,4 @@ language: generic
 
 script:
  
-  - npm run cypress:run
+  - npm run cypress:open --spec "cypress/integration/test.spec.js"
